@@ -1,0 +1,12 @@
+diff '--color=auto' -ur a/usr/share/jolla-messages/pages/ConversationPage.qml b/usr/share/jolla-messages/pages/ConversationPage.qml
+--- a/usr/share/jolla-messages/pages/ConversationPage.qml	2023-04-17 18:34:32.425916599 +0300
++++ b/usr/share/jolla-messages/pages/ConversationPage.qml	2023-04-17 18:34:41.715926128 +0300
+@@ -94,7 +94,7 @@
+ 
+         anchors {
+             fill: parent
+-            topMargin: conversationHeader.active ? conversationHeader.height - 2*Theme.paddingLarge : 0
++            topMargin: (conversationHeader.active ? conversationHeader.height - (conversationHeader.height - Theme.fontSizeLarge) / 2 : 0 ) - Theme.paddingMedium
+         }
+ 
+         model: CommConversationModel {
